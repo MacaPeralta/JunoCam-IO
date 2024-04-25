@@ -14,16 +14,16 @@ red_channel, green_channel, blue_channel = split_rgb_channels(raw)
 manual_array = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) # fill array with roll values called in np.roll()
 adjusted_channel = apply_np_roll_to_bands(red_channel, manual_array)
 
-# Plot Red, Green, Blue Channels
-# Red Channel
+
+# Plot Red Channel
 axes[0].imshow(red_channel, cmap='Reds', aspect='auto')
 axes[0].set_title('Red Channel')
 axes[0].axis('off')  # Hide axes for cleaner look
-# Green Channel
+# Plot Green Channel
 axes[1].imshow(green_channel, cmap='Greens', aspect='auto')
 axes[1].set_title('Green Channel')
 axes[1].axis('off')
-# Blue Channel
+# Plot Blue Channel
 axes[2].imshow(blue_channel, cmap='Blues', aspect='auto')
 axes[2].set_title('Blue Channel')
 axes[2].axis('off')
